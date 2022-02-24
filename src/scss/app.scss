@@ -1,0 +1,45 @@
+#app {
+  background-color: #ffe5b5;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  #nav {
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    a {
+      z-index: 1000;
+      margin-top: 3rem;
+      padding-right: 2.5rem;
+
+      img {
+        padding: 1rem 1.5rem;
+        position: relative;
+      }
+    }
+    .router-link-exact-active {
+      background-color: white;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+    }
+  }
+}
+@include w1300 {
+  #app {
+    height: auto;
+  }
+}
+@include w580 {
+  #app {
+    #nav {
+      a {
+        margin-top: 1.5rem;
+        padding-right: 1rem;
+        img {
+          width: 80%;
+        }
+      }
+    }
+  }
+}

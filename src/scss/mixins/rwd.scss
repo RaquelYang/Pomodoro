@@ -1,0 +1,29 @@
+@mixin w580 {
+  @media (max-width: $breakpoint-w580) {
+    @content;
+  }
+}
+
+@mixin w800 {
+  @media (max-width: $breakpoint-w800) {
+    @content;
+  }
+}
+
+@mixin w1300 {
+  @media (max-width: $breakpoint-w1300) {
+    @content;
+  }
+}
+
+@mixin w1500 {
+  @media (max-width: $breakpoint-w1500) {
+    @content;
+  }
+}
+
+@mixin w1700 {
+  @media (max-width: $breakpoint-w1700) {
+    @content;
+  }
+}

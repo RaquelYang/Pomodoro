@@ -1,0 +1,44 @@
+#list {
+  .box {
+    width: 80%;
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+  }
+  .left,
+  .right {
+    width: 50%;
+    margin-top: 2rem;
+    position: relative;
+    justify-content: space-around;
+  }
+  .text {
+    color: #d9674e;
+    font-size: 2rem;
+  }
+  .line {
+    border-bottom: 5px solid #d9674e;
+  }
+  .chart {
+    margin-top: 13rem;
+  }
+}
+
+@include w1300 {
+  #list {
+    .box {
+      width: 65%;
+    }
+    .left,
+    .right {
+      width: 100%;
+    }
+  }
+}
+@include w800 {
+  #settings {
+    .box {
+      width: 80%;
+    }
+  }
+}

@@ -1,0 +1,121 @@
+#settings {
+  .box {
+    width: 80%;
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+  }
+  .left,
+  .right {
+    width: 50%;
+    margin-top: 2rem;
+    position: relative;
+    justify-content: space-around;
+  }
+  .text {
+    color: #d9674e;
+    font-size: 2rem;
+  }
+  .line {
+    border-bottom: 5px solid #d9674e;
+  }
+  .option {
+    input[type="radio"] {
+      width: 2rem;
+      height: 2rem;
+      opacity: 0;
+      &:checked + span {
+        color: #d9674e;
+      }
+      &:checked + .colorradio::before {
+        content: "";
+        position: absolute;
+        width: 1.3rem;
+        height: 1.3rem;
+        display: block;
+        top: 3px;
+        left: 2px;
+        background: #d9674e;
+        border-radius: 50%;
+      }
+      &:checked + .colorradio::after {
+        content: "";
+        position: absolute;
+        width: 2rem;
+        height: 2rem;
+        display: block;
+        top: -3px;
+        left: -3px;
+        border: 3px solid #d9674e;
+        border-radius: 50%;
+      }
+      &:checked + .colorradio {
+        border: 3px solid transparent;
+      }
+    }
+    .colorradio {
+      border: 3px solid #707070;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      position: absolute;
+      top: 13px;
+      left: 0;
+      pointer-events: none;
+    }
+  }
+  input[type="radio"]:checked + .optionradio {
+    color: #532043;
+  }
+  .optionradio {
+    color: #707070;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+    padding: 0;
+    position: relative;
+    label {
+      padding: 0.3rem;
+    }
+  }
+  .additem {
+    border: none;
+    font-size: 2.5rem;
+    background: transparent;
+    font-weight: 300;
+    color: #858c51;
+  }
+}
+@include w1300 {
+  #settings {
+    .box {
+      width: 65%;
+    }
+    .left,
+    .right {
+      width: 100%;
+    }
+  }
+}
+@include w800 {
+  #settings {
+    .box {
+      width: 80%;
+    }
+  }
+}
+@include w580 {
+  #settings {
+    .option {
+      input[type="radio"] {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+    .optionradio {
+      font-size: 1.5rem;
+    }
+  }
+}

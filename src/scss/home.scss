@@ -1,0 +1,486 @@
+#home {
+  .edit {
+    font-size: 1.5rem;
+    background: white;
+    border: 3px solid #d9674e;
+    color: #d9674e;
+    border-radius: 5px;
+    padding-left: 1rem;
+    margin-left: 1rem;
+  }
+  .edit:focus {
+    border: 3px solid #d9674e;
+    outline: none;
+  }
+  .box {
+    width: 100%;
+    display: flex;
+  }
+  .left,
+  .right {
+    width: 50%;
+    margin-top: 8rem;
+    position: relative;
+  }
+  .left {
+    .todos {
+      position: relative;
+      .image {
+        width: calc(500px + 10vw);
+        position: absolute;
+        left: 0;
+        right: 0;
+        img {
+          width: 90%;
+        }
+      }
+      .first {
+        position: absolute;
+        width: calc(600px - 1vw);
+        top: 10%;
+        #todo {
+          width: 2rem;
+          height: 2rem;
+          margin-left: 2rem;
+          opacity: 0;
+        }
+        #todo[type="radio"]:checked + .radiotype::after {
+          content: "";
+          position: absolute;
+          height: 1rem;
+          width: 2rem;
+          display: block;
+          border-bottom: 3px solid #d9674e;
+          border-left: 3px solid #d9674e;
+          bottom: 12px;
+          left: 2px;
+          transform: rotate(-45deg);
+        }
+        .radiotype {
+          position: absolute;
+          width: 2rem;
+          height: 2rem;
+          border: 3px solid #d9674e;
+          border-radius: 50%;
+          margin-left: 2rem;
+          top: 30%;
+        }
+        .title {
+          font-size: 3rem;
+          margin-left: 1.5rem;
+        }
+      }
+      .others {
+        padding-top: 10rem;
+        margin-left: 2rem;
+        display: flex;
+        flex-direction: column;
+
+        .todobox {
+          width: 100%;
+          margin-top: 0.5rem;
+          position: relative;
+          label {
+            display: flex;
+            width: 80%;
+            img {
+              margin-left: auto;
+              width: 50px;
+            }
+          }
+          #todo1,
+          #todo2,
+          #todo3 {
+            width: 2rem;
+            height: 2rem;
+            opacity: 0;
+          }
+          #todo1[type="radio"]:checked + .radiotype::after,
+          #todo2[type="radio"]:checked + .radiotype::after,
+          #todo3[type="radio"]:checked + .radiotype::after {
+            content: "";
+            position: absolute;
+            height: 1rem;
+            width: 2rem;
+            display: block;
+            border-bottom: 3px solid #d9674e;
+            border-left: 3px solid #d9674e;
+            bottom: 12px;
+            left: 2px;
+            transform: rotate(-45deg);
+          }
+          .radiotype {
+            position: absolute;
+            width: 2rem;
+            height: 2rem;
+            border: 3px solid #d9674e;
+            border-radius: 50%;
+            top: 15%;
+          }
+          .title1 {
+            font-size: 2rem;
+            margin-left: 1.5rem;
+          }
+        }
+      }
+    }
+    // additem
+    .todos-box {
+      width: 75%;
+      margin-left: auto;
+    }
+    .addtodo {
+      position: absolute;
+      display: flex;
+      top: 70%;
+      width: 61%;
+      .addinput {
+        color: #d9674e;
+        padding: 0.5rem 1rem;
+        width: 100%;
+        border: 3px solid #d9674e;
+        outline: none;
+        border-top-left-radius: 0.3rem;
+        border-bottom-left-radius: 0.3rem;
+        font-size: 2rem;
+        &::placeholder {
+          color: #d9674e;
+        }
+      }
+
+      .addbtn {
+        width: auto;
+        border: 3px solid #d9674e;
+        border-left: none;
+        padding: 0.5rem;
+        border-top-right-radius: 0.3rem;
+        border-bottom-right-radius: 0.3rem;
+        background-color: white;
+      }
+    }
+    // recentlycpmpleted
+    .recentcompleted {
+      width: 65%;
+      position: absolute;
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 5px;
+      top: 85%;
+      .txt {
+        display: flex;
+        .recenttxt {
+          margin-right: auto;
+          padding: 1rem 1.5rem;
+          color: #707070;
+          font-size: 1.2rem;
+        }
+        .more {
+          padding: 1rem 1.5rem;
+          color: #858c51;
+          font-size: 1.2rem;
+        }
+      }
+    }
+    .completedtodo {
+      padding: 0.5rem 1.5rem;
+      display: flex;
+      align-items: center;
+      div {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        border: 3px solid #d9674e;
+        position: relative;
+        &::after {
+          content: "";
+          display: block;
+          width: 2rem;
+          height: 1rem;
+          border-bottom: 3px solid #d9674e;
+          border-left: 3px solid #d9674e;
+          transform: rotate(-45deg);
+          position: absolute;
+          bottom: 12px;
+          left: 2px;
+        }
+      }
+      .completedtxt {
+        color: #707070;
+        font-size: 1.8rem;
+        padding-left: 1.5rem;
+      }
+    }
+  }
+  .right {
+    position: relative;
+    img {
+      width: 70%;
+    }
+    .timer {
+      color: white;
+      position: absolute;
+      top: 36%;
+      left: 17%;
+      font-size: 8vw;
+      font-weight: 500;
+    }
+    span.bar {
+      background-color: white;
+      border-radius: 1rem;
+      width: 70%;
+      height: 10px;
+      display: block;
+      margin-top: 3rem;
+    }
+    .icons {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-top: 2rem;
+      justify-content: center;
+      left: 3rem;
+      width: 70%;
+      img {
+        width: 3vw;
+      }
+      .start {
+        padding-right: 2rem;
+        img {
+          width: 5vw;
+        }
+      }
+    }
+  }
+}
+@include w1700 {
+  #home {
+    .recentcompleted {
+      .completedtodo {
+        span.completedtxt {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+@include w1500 {
+  #home {
+    .left {
+      .todos {
+        .image {
+          width: calc(400px + 10vw);
+        }
+        .first {
+          top: 0%;
+        }
+        .others {
+          padding-top: 8rem;
+          .todobox {
+            label {
+              width: 90%;
+            }
+          }
+        }
+      }
+      .recentcompleted {
+        .txt {
+          .recenttxt,
+          .more {
+            font-size: 1rem;
+          }
+        }
+        .completedtodo {
+          span.completedtxt {
+            font-size: 1.2rem;
+          }
+        }
+      }
+      .addtodo {
+        width: 65%;
+        .addinput {
+          font-size: 1.5rem;
+          padding: 0.3rem 0.5rem;
+        }
+        .addbtn {
+          padding: 0;
+          img {
+            width: 80%;
+          }
+        }
+      }
+    }
+  }
+}
+@include w1300 {
+  #home {
+    height: 100vh;
+    .box {
+      flex-direction: column;
+    }
+    .left,
+    .right {
+      width: 100%;
+    }
+    .right {
+      text-align: center;
+      order: -1;
+      margin-top: 2rem;
+      img {
+        width: 40%;
+      }
+      .timer {
+        top: 40%;
+        left: 40%;
+      }
+      span.bar {
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+      .icons {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .left {
+      margin: 0;
+      .todos-box {
+        display: flex;
+        flex-direction: column-reverse;
+        .first {
+          position: relative;
+          .title {
+            top: 0;
+            width: 100%;
+            display: block;
+            margin-top: 1rem;
+          }
+        }
+      }
+      .todos {
+        .image {
+          img,
+          .todo,
+          .radiotype {
+            display: none;
+          }
+        }
+        .others {
+          margin-left: 0;
+          padding: 0;
+          margin-top: 8rem;
+          .todobox {
+            width: 80%;
+          }
+        }
+      }
+      .addtodo {
+        position: relative;
+        width: 70%;
+        margin-top: 2rem;
+        .addinput {
+          padding: 0.5rem 1rem;
+          font-size: 2rem;
+        }
+        .addbtn {
+          padding: 0.5rem 1rem;
+          img {
+            width: 100%;
+          }
+        }
+      }
+      .recentcompleted {
+        display: none;
+      }
+    }
+  }
+}
+@include w800 {
+  #home {
+    .right {
+      img {
+        width: 60%;
+      }
+      .timer {
+        font-size: 12vw;
+        top: 39%;
+        left: 35%;
+      }
+      span.bar {
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+      }
+      .icons {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        img {
+          width: 6vw;
+        }
+        .start {
+          img {
+            width: 10vw;
+          }
+        }
+      }
+    }
+    .left {
+      .todos {
+        .others {
+          .todobox {
+            width: 80%;
+          }
+        }
+      }
+      .addtodo {
+        position: relative;
+        width: 70%;
+        margin-top: 2rem;
+        .addinput {
+          padding: 0.3rem 0.5rem;
+          font-size: 1.5rem;
+        }
+        .addbtn {
+          padding: 0.3rem 0.5rem;
+          img {
+            width: 100%;
+          }
+        }
+      }
+      .recentcompleted {
+        display: none;
+      }
+    }
+  }
+}
+@include w580 {
+  #home {
+    .right {
+      .timer {
+        top: 35%;
+      }
+    }
+    .left {
+      .addtodo {
+        flex-direction: column;
+        .addinput {
+          border-top-left-radius: 0.3rem;
+          border-top-right-radius: 0.3rem;
+          border-bottom-left-radius: 0rem;
+        }
+        .addbtn {
+          border-left: 3px solid #d9674e;
+          border-top: none;
+          border-top-left-radius: 0rem;
+          border-top-right-radius: 0rem;
+          border-bottom-left-radius: 0.3rem;
+          border-bottom-right-radius: 0.3rem;
+          img {
+            width: 10%;
+          }
+        }
+      }
+    }
+  }
+}
