@@ -10,7 +10,6 @@
                   <img src="../assets/images/tomato.png">
                   Done</div>
               </div>
-
             </div>
           </div>
         </div>
@@ -25,19 +24,19 @@
                   Focus Time</div>
               </div>
               <div class="row mt-5">
-                <div class="col-6 today text-center">
+                <div class="col-6 today">
                   <p class="text-left">Today</p>
-                  <span>2</span>
-                  <span>done</span>
-                  <span>/</span>
-                  <span>5</span>
+                  <span class="todo1">2 </span>
+                  <span class="todo2"> done </span>
+                  <span class="todo3"> / </span>
+                  <span class="todo4"> 5 </span>
                 </div>
-                <div class="col-6 week text-center">
+                <div class="col-6 week">
                   <p class="text-left">Week</p>
-                  <span>2</span>
-                  <span>done</span>
-                  <span>/</span>
-                  <span>5</span>
+                  <span class="todo1">2 </span>
+                  <span class="todo2"> done </span>
+                  <span class="todo3"> / </span>
+                  <span class="todo4"> 5 </span>
                 </div>
               </div>
             </div>
